@@ -1,8 +1,13 @@
 def conversor_Texto_Tabla_HTML (linea):
-    add_arrow = "tr" + linea + "tr"
-    print(add_arrow)
+    Corte_str = linea.find(":")
+
+    comando = "<td> " + linea[0:Corte_str] + " </td>"
+    funcion = "<td> " + linea[Corte_str + 1:len(linea)]  + " </td>"
+    fila = "<tr> " + comando + funcion + " </tr>"
+    print(fila)
 
 
 
 if __name__ == "__main__":
-    conversor_Texto_Tabla_HTML()
+    texto_a_fila = input("Introducir texto a convertir a fila de columna HTML: ")
+    conversor_Texto_Tabla_HTML(texto_a_fila)
