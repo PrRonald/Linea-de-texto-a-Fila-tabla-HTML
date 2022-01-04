@@ -3,7 +3,11 @@ def conversor_Texto_Tabla_HTML (linea):
 
     comando = "<td> " + linea[0:Corte_str] + " </td>"
     funcion = "<td> " + linea[Corte_str + 1:len(linea)]  + " </td>"
-    fila = "<tr> " + comando + funcion + " </tr>"
+    fila = """    <tr>
+        {}
+        {}
+    </tr> """.format(comando, funcion)
+     
     print(fila)
 
 
