@@ -20,3 +20,5 @@ if __name__ == "__main__":
         elif texto_a_fila == "1":
             break
  
+ #dar alerta de un numero distinto de 1
+ 
